@@ -563,6 +563,24 @@
     <script src="js/plugins/ScrollTrigger.min.js"></script>
     <!-- scroll to js -->
     <script src="js/plugins/ScrollTo.min.js"></script>
+    
+    <!-- Logo scroll hide script -->
+    <script>
+        $(document).ready(function() {
+            $(window).on('scroll', function() {
+                var scrollTop = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                var frame = $('.mil-frame');
+                
+                if (scrollTop > windowHeight * 0.5) {
+                    frame.addClass('mil-hide-logo');
+                } else {
+                    frame.removeClass('mil-hide-logo');
+                }
+            });
+        });
+    </script>
+    
     <!-- ashley js -->
     <script src="js/main.js"></script>
 
